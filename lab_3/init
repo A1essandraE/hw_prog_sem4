@@ -1,1 +1,90 @@
+#include <iostream>
+#include <string>
 
+class Shape {
+public:
+    void Scale(float ScaleFactor) {
+
+    }
+    void ShowInfo() {
+
+    }
+    std::string GetName() {
+
+    }
+};
+
+class Shape2D : public Shape {
+private:
+    float Area = 0;
+    void CalculateArea() {
+        
+    }
+public:
+    float Getarea() {
+
+    }
+    bool operator > (Shape2D) {
+
+    }
+    bool operator < (Shape2D) {
+
+    }
+    bool operator == (Shape2D) {
+
+    }
+};
+
+class Shape3D : public Shape {
+private:
+    float volume = 0;
+    void CalculateVolume() {
+
+    }
+public:
+    void GetVolume() {
+
+    }
+    bool operator > (Shape3D) {
+
+    }
+    bool operator < (Shape3D) {
+
+    }
+    bool operator == (Shape3D) {
+
+    }
+
+    class Square : public Shape, public Shape2D {
+    private:
+        float side;
+    };
+
+    class Triangle : public Shape, public Shape2D {
+    private:
+        float base;
+        float height;
+    };
+
+    class Circle : public Shape, public Shape2D {
+        float radius;
+    };
+
+    class TriangularPyramid : public Shape, public Shape3D {
+        float height;
+    };
+
+    class Cylinder : public Shape, public Shape3D {
+        float height;
+    };
+
+    class Sphere : public Shape, public Shape3D {
+        float height;
+    };
+};
+
+
+int main()
+{
+    return 0;
+}
