@@ -64,7 +64,7 @@ public:
 
 void showSelection() {
     std::cout << "---------" << std::endl;
-    std::cout << "Benvenuti! This candy machine sells four different items: sweets, chips, chewing-gun and biscuits." << std::endl;
+    std::cout << "Benvenuti! This candy machine sells four different items: sweets, chips, chewing-gum and biscuits." << std::endl;
     std::cout << "Every item has a special code. To make a purchase insert the code of the item." << std::endl;
     std::cout << "1. Sweets\n2. Chips\n3. Chewing-gum\n4. Biscuits" << std::endl;
     std::cout << "If you want to exit insert 0." << std::endl;
@@ -127,7 +127,7 @@ void sellProduct(dispenserType& prodotto, cashRegister& qualcosa) {
 
 int main()
 {
-    dispenserType Dolci(10, 50); //конфеты
+    dispenserType Dolci(10, 2); //конфеты
     dispenserType PatatineFritte(13, 50);  //чипсы
     dispenserType Mentine(5, 50); //жвачка
     dispenserType Biscotti(11, 50);  //печенье
@@ -157,7 +157,11 @@ int main()
             break;
         }
 
-        showSelection();
+        std::cout << "The remaining quantity of the items:" << std::endl;
+        std::cout << "1. Sweets(" << Dolci.getNoOfitems() << ")" << std::endl;
+        std::cout << "2. Chips(" << PatatineFritte.getNoOfitems() << ")" << std::endl;
+        std::cout << "3. Chewing-gum(" << Mentine.getNoOfitems() << ")" << std::endl;
+        std::cout << "4. Biscuits(" << Biscotti.getNoOfitems() << ")" << std::endl;
         std::cin >> choice;
     }
     return 0;
